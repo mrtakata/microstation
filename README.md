@@ -18,6 +18,17 @@ For the ESP32, I followed [this guide](https://micropython.org/download/ESP32_GE
 4. Deploy the firmware to the board: `esptool --baud 460800 write-flash 0x1000 ESP32_BOARD_NAME-DATE-VERSION.bin`
 where _ESP32_BOARD_NAME-DATE-VERSION.bin_  is the name of the file you just downloaded.
 
+### Connection
+To upload and interact with the board, I am using mpremote: `pip install mpremote`
+
+Quick commands:
+- Connect to the board: `mpremote connect PORTNAME`
+- Soft restart the board: `mpremote reset` 
+- REPL: `mpremote`
+- Upload a simple script to test: `mpremote cp _filename_ :main.py`
+where `:` is the root folder in your board. 
+
+
 ### Diagram
 ![Screenshot](./img/esp32-diagram.png)
 I am using a 30-pin ESP32 WROOM board, and I found the diagram [here](https://lastminuteengineers.com/esp32-pinout-reference/).
