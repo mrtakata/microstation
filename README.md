@@ -18,6 +18,9 @@ For the ESP32, I followed [this guide](https://micropython.org/download/ESP32_GE
 4. Deploy the firmware to the board: `esptool --baud 460800 write-flash 0x1000 ESP32_BOARD_NAME-DATE-VERSION.bin`
 where _ESP32_BOARD_NAME-DATE-VERSION.bin_  is the name of the file you just downloaded.
 
+### Diagram
+![Screenshot](./img/esp32-diagram.png)
+I am using a 30-pin ESP32 WROOM board, and I found the diagram [here](https://lastminuteengineers.com/esp32-pinout-reference/).
 ## Arduino
 For Arduino, I did some stuff using the Arduino IDE, but I coded in C over there.
 
